@@ -10,9 +10,7 @@ int main() {
     vector<int> val(digits, 0);
     val[0] = 1;
 
-    int counter = 2;
-
-    while (counter <= n) {
+    for (int counter = 2; counter <= n; counter++) {
         int quotient = 0;
         for (int i = 0; i < digits; ++i){
             int x = val[i] * counter + quotient;
@@ -28,7 +26,6 @@ int main() {
 
             val[i] = reminder;
         }
-        counter++;
     }
 
     int res = 0;
