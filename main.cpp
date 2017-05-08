@@ -16,15 +16,12 @@ int main() {
             int x = val[i] * counter + quotient;
             quotient = 0;
 
-            int reminder;
             if (x >= base) {
-                reminder = x % base;
+                val[i] = x % base;
                 quotient = x / base;
             }
             else
-                reminder = x;
-
-            val[i] = reminder;
+                val[i] = x;
         }
     }
 
