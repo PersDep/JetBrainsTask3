@@ -12,16 +12,11 @@ int main() {
 
     int quotient = 0;
     for (int counter = 2; counter <= n; ++counter) {
-        for (int i = 0; i < digits; ++i){
+        for (int i = 0; i < digits; ++i) {
             int x = val[i] * counter + quotient;
-            quotient = 0;
 
-            if (x >= base) {
-                val[i] = x % base;
-                quotient = x / base;
-            }
-            else
-                val[i] = x;
+            val[i] = x % base;
+            quotient = x / base;
         }
     }
 
