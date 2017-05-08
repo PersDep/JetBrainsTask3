@@ -10,8 +10,8 @@ int main() {
     vector<int> val(digits, 0);
     val[0] = 1;
 
-    for (int counter = 2; counter <= n; counter++) {
-        int quotient = 0;
+    int quotient = 0;
+    for (int counter = 2; counter <= n; ++counter) {
         for (int i = 0; i < digits; ++i){
             int x = val[i] * counter + quotient;
             quotient = 0;
